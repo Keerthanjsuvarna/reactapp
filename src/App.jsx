@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import View from './component/View';
 
 const getDatafromLS=()=>{
-   const data=sessionStorage.getItem('books');
+   const data=localStorage.getItem('books');
    if(data){
     return JSON.parse(data);
      
@@ -44,7 +44,7 @@ const deleteBook=(id)=> {
 }
 
   useEffect(()=> {
-      sessionStorage.setItem('books',JSON.stringify(books));
+      localStorage.setItem('books',JSON.stringify(books));
   },[books])
   return (
     
