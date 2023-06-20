@@ -14,7 +14,7 @@ const getDatafromLS=()=>{
 }
 export const App = () => {
 
-  const [books, setbooks]=useState([]);
+  const [books, setbooks]=useState(getDatafromLS());
   const [id,setID]=useState('');
   const [title,setTitle]=useState('');
   const [author,setAuthor]=useState('');
